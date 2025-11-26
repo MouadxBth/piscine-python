@@ -1,0 +1,29 @@
+from typing import Any
+
+
+def all_thing_is_obj(object: Any) -> int:
+    """
+    Print the object type and return 42.
+
+    Args:
+        object: Any object to check
+
+    Returns:
+        int: Always returns 42
+    """
+    obj_type = type(object)
+
+    if isinstance(object, str):
+        print(f"{object} is in the kitchen : {obj_type}")
+    elif isinstance(object, list):
+        print(f"List : {obj_type}")
+    elif isinstance(object, tuple):
+        print(f"Tuple : {obj_type}")
+    elif isinstance(object, set):
+        print(f"Set : {obj_type}")
+    elif isinstance(object, dict):
+        print(f"Dict : {obj_type}")
+    else:
+        print("Type not found")
+
+    return 42
